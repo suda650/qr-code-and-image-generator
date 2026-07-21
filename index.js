@@ -1,6 +1,6 @@
 
 
-// 1. Use the inquirer npm package to get user input.
+
 import inquirer from 'inquirer';
 import qr from 'qr-image';
 import fs from 'fs';
@@ -20,7 +20,7 @@ inquirer
 var qr_svg = qr.image(url);
 qr_svg.pipe(fs.createWriteStream('qr_image.png'));
 
-fs.writeFile("Sudeys.txt",url, (err)=>{
+fs.writeFile("url.txt",url, (err)=>{
     if(err) throw err;
     console.log("the file saved successfully");
 });
